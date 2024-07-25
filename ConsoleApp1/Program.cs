@@ -1,14 +1,15 @@
-﻿namespace ConsoleApp1
+﻿using ConsoleApp1.Interface;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
+            IMyType TypeA= new MyType();
+            MyType TypeB= new MyType();
+            TypeA.Print();
+           
         }
     }
 }
