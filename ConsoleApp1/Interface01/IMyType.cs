@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp1.Interface
 { 
     //you can write just in namespace Access Modifier internal and public 
-    internal interface IMyType
+    public interface IMyType
     {
         //Default Access Modifier inside interface =>public ;
         //private not allowed in interface 

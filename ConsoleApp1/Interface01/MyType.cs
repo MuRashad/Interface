@@ -10,7 +10,6 @@ namespace ConsoleApp1.Interface
     {
         private int age;
         private int salary;
-
         public int Salary
         {
             get { return salary; }
@@ -19,7 +18,7 @@ namespace ConsoleApp1.Interface
         /// <summary>
         ///interface method and property
         /// </summary>
-        public int Age { get { return age; } set { age=value; } }
+        public int Age { get { return age; } set { age =value; } }
         public void MyFunc()
         {
             Console.WriteLine("I have already signed the code contract with IMyType interface___!:)");
