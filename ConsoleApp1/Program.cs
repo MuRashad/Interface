@@ -1,8 +1,10 @@
-﻿using ConsoleApp1.Interface;
+﻿using ConsoleApp1.IClonable;
+using ConsoleApp1.Interface;
 using ConsoleApp1.Interface01;
 using ConsoleApp1.Interface02;
 using ConsoleApp1.Interface03;
 using ConsoleApp1.Interface2;
+using System.Collections.Immutable;
 using System.Drawing;
 using System.Text;
 
@@ -174,7 +176,80 @@ namespace ConsoleApp1
 
             #region Icloneable 
 
-            
+            //Employee Emp01 =new Employee()
+            //{
+            //    Name="Samy",
+            //    Age=25 ,
+            //    Id =1
+            //};
+            //Employee Emp02 =new Employee()
+            //{
+            //    Name="Ahmed",
+            //    Age=30 ,
+            //    Id =2
+            //};
+            //Console.WriteLine(Emp01.GetHashCode());
+            //Console.WriteLine(Emp02.GetHashCode());
+            //Emp02 = Emp01;//shallow copy 
+
+            //Console.WriteLine(Emp01.GetHashCode());
+            //Console.WriteLine(Emp02.GetHashCode());
+            //Console.WriteLine(Emp01);
+            //Console.WriteLine(Emp02);
+
+            //i don't have the methode clone here in the class , the main purpose to Take another
+            //reference from the same data of employee , so we need deep copy and need to implememtn Iclonable interface 
+            //Employee Emp01 = new Employee()
+            //{
+            //    Name = "Samy",
+            //    Age = 25,
+            //    Id = 1,
+            //    EmpDepartment = new Department()
+            //    {
+            //        DepName = "management",
+            //        DepId = 2
+            //    }
+
+            //};
+            //Employee Emp02 = new Employee()
+            //{
+            //    Name = "Ahmed",
+            //    Age = 30,
+            //    Id = 2,
+            //    EmpDepartment = new Department()
+            //    {
+            //        DepName = "HR",
+            //        DepId = 2
+            //    }
+            //};
+            ////this is a deep copy , i have taken a new reference with the same data of the object if i need to change something has no effect to another 
+            //Emp01 = (Employee)Emp02.Clone();
+            //Console.WriteLine(Emp02);    
+            //Console.WriteLine(Emp01);    
+            //Console.WriteLine(Emp01.GetHashCode());    
+            //Console.WriteLine(Emp02.GetHashCode()); 
+            //Console.WriteLine(":):):):):)):):)::):):):):)):)\n");
+            //Emp02.Name = "Doaa";
+            //Emp02.Age = 10;
+            //Console.WriteLine(Emp02);
+            //Console.WriteLine(Emp01);
+            //Console.WriteLine(Emp01.GetHashCode());
+            //Console.WriteLine(Emp02.GetHashCode());
+            //Console.WriteLine(":):):):):)):):)::):):):):)):)\n");
+            ////let's go deeply in details about cloneable
+            #endregion
+            #region Icomparable
+            Employee[] employees = new Employee[]
+            {
+                new Employee(){Name="Mahmoud" ,Age=25 ,Id=1},
+                new Employee(){Name="Sally" ,Age=40 ,Id=2},
+                new Employee(){Name="Doaa" ,Age=30 ,Id=3},
+                new Employee(){Name="Mona" ,Age=50 ,Id=4}
+            };
+            Array.Sort(employees);
+            foreach (Employee employee in employees) {
+                Console.WriteLine(employee); 
+            }
 
             #endregion
         }
